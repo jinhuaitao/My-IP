@@ -24,24 +24,7 @@
 
 ## 🚀 快速开始
 
-### 方式一：使用 Wrangler CLI（推荐）
-
-1. **安装 Wrangler CLI**
-   ```bash
-   npm install -g wrangler
-   ```
-
-2. **登录 Cloudflare 账户**
-   ```bash
-   wrangler login
-   ```
-
-3. **部署 Worker**
-   ```bash
-   wrangler deploy
-   ```
-
-### 方式二：使用 Cloudflare Dashboard
+### 方式一：：使用 Cloudflare Dashboard
 
 1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com)
 2. 进入 Workers & Pages 页面
@@ -49,54 +32,7 @@
 4. 将 `cloudflare-worker.js` 的内容复制到编辑器中
 5. 点击 "Deploy" 部署
 
-### 方式三：使用 GitHub Actions（自动化部署）
 
-创建 `.github/workflows/deploy.yml` 文件：
-
-```yaml
-name: Deploy to Cloudflare Workers
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - uses: actions/checkout@v3
-      - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-```
-
-## 🔧 配置说明
-
-### 环境变量（可选）
-
-可以在 `wrangler.toml` 中配置环境变量：
-
-```toml
-name = "ip-info-worker"
-compatibility_date = "2024-01-01"
-
-[vars]
-SERVICE_NAME = "IP 信息查询工具"
-VERSION = "1.0.0"
-```
-
-### 自定义域名
-
-1. 在 Cloudflare Dashboard 中为 Worker 添加自定义域名
-2. 或编辑 `wrangler.toml`：
-
-```toml
-routes = [
-  { pattern = "ip.example.com", custom_domain = true }
-]
-```
 
 ## 📊 使用示例
 
@@ -107,7 +43,7 @@ routes = [
 
 ```bash
 # 获取完整信息
-curl https://your-worker.your-subdomain.workers.dev/
+curl https://your-worker.your-subdomain.workers.dev
 
 # 仅获取 IP 地址
 curl https://your-worker.your-subdomain.workers.dev/ip
@@ -119,47 +55,6 @@ curl https://your-worker.your-subdomain.workers.dev/asn
 curl https://your-worker.your-subdomain.workers.dev/colo
 ```
 
-### 在网页中嵌入
-
-```html
-<!-- 显示 IP 地址 -->
-<div id="ipv4addr"></div>
-<script src="https://your-worker.your-subdomain.workers.dev/myipv4addr"></script>
-
-<!-- 显示 Cloudflare 节点 -->
-<div id="cfedge"></div>
-<script src="https://your-worker.your-subdomain.workers.dev/mycfedge"></script>
-```
-
-## 🛠️ 开发指南
-
-### 本地开发
-
-```bash
-# 启动本地开发服务器
-wrangler dev
-
-# 在浏览器中打开 http://localhost:8787 测试
-```
-
-### 测试 API
-
-```bash
-# 测试主页面
-curl http://localhost:8787/
-
-# 测试特定端点
-curl http://localhost:8787/ip
-curl http://localhost:8787/asn
-```
-
-### 项目结构
-
-```
-├── cloudflare-worker.js    # Worker 主文件
-├── README.md              # 项目说明文档
-└── wrangler.toml          # Wrangler 配置文件（可选）
-```
 
 ## 🔍 技术细节
 
@@ -203,17 +98,11 @@ curl http://localhost:8787/asn
 
 本项目基于 MIT 许可证开源。
 
-## 🙏 致谢
-
-- [Cloudflare Workers](https://workers.cloudflare.com/) - 提供强大的边缘计算平台
-- [Cloudflare 中文社区](https://community.cloudflare.com/) - 技术支持与交流
-
 ## 📞 联系我们
 
 如有问题或建议，请通过以下方式联系：
 
-- 提交 [GitHub Issue](https://github.com/your-repo/issues)
-- 发送邮件至：your-email@example.com
+- 提交 [GitHub Issue](https://github.com/jinhuaitao)
 
 ---
 
