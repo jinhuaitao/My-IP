@@ -83,7 +83,7 @@ addEventListener('fetch', event => {
     📱 用户代理:    ${ua}
     
     ==================
-    © 2024 IP 信息查询工具 | 基于 Cloudflare Workers
+    © 2025 IP 信息查询工具 | 基于 Cloudflare Workers
     `;
     
         return new Response(text, {
@@ -292,7 +292,7 @@ addEventListener('fetch', event => {
             </div>
 
             <div class="footer">
-                <p>© 2024 IP 信息查询工具 | 基于 Cloudflare Workers</p>
+                <p>© 2025 IP 信息查询工具 | 基于 Cloudflare Workers</p>
             </div>
         </div>
     </body>
