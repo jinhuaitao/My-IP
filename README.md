@@ -102,7 +102,7 @@ curl https://your-worker.your-subdomain.workers.dev/colo
 
 如有问题或建议，请通过以下方式联系：
 - [GitHub仓库](https://github.com/jinhuaitao/My-IP)
-- 提交 [GitHub Issue](https://github.com/jinhuaitao)
+- [GitHub Issue](https://github.com/jinhuaitao)
 
 ---
 
