@@ -293,6 +293,7 @@ addEventListener('fetch', event => {
 
             <div class="footer">
                 <p>© 2025 IP 信息查询工具 | 基于 Cloudflare Workers</p>
+                <a href="https://github.com/jinhuaitao/My-IP" class="github-link" target="_blank">GitHub</a>
             </div>
         </div>
     </body>
