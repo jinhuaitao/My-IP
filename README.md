@@ -58,12 +58,6 @@ curl https://your-worker.your-subdomain.workers.dev/colo
 
 ## 🔍 技术细节
 
-### 使用的 Cloudflare 请求属性
-
-- `request.cf` - Cloudflare 提供的连接信息
-- `request.headers.get("cf-connecting-ip")` - 用户真实 IP
-- `request.headers.get("user-agent")` - 用户代理信息
-
 ### 智能响应机制
 
 - **浏览器访问**：返回完整的 HTML 页面
